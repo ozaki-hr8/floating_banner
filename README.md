@@ -77,7 +77,6 @@ CSSでバナーの位置を固定することで簡単に実装することが�
   $button.classList.toggle('floating-banner_buttonClose')
   })
 </script>
-}
 ```
 ```css
 a:hover img {
