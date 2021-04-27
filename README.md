@@ -59,7 +59,6 @@ CSSでバナーの位置を固定することで簡単に実装することが�
 
 次に開閉式のフローティングバナーのコード例を紹介します。
 
-}
 ```html
 <div class="floating-banner">
 <button onclick="changeClass()" class="floating-banner_button" role="button"></button>
