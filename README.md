@@ -50,8 +50,7 @@ a:hover img {
 ```
 
 【実装例】
-
-フローティングバナーの実装例
+https://ozaki-hr8.github.io/floating_banner/
 
 CSSでバナーの位置を固定することで簡単に実装することができます。
 
