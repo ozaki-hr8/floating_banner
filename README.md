@@ -163,7 +163,7 @@ p {
 ```
 
 【実装例】
-<a href="https://ozaki-hr8.github.io/floating_banner/index2.html">s</a>
+https://ozaki-hr8.github.io/floating_banner/index2.html
 
 JavaScriptを用いて、ボタンがクリックされた時にバナーを非表示に、アイコンが変更されるようにしています。
 
