@@ -60,22 +60,22 @@ CSSでバナーの位置を固定することで簡単に実装することが�
 
 ```html
 <div class="floating-banner">
-<button onclick="changeClass()" class="floating-banner_button" role="button"></button>
-<p class="target">
-<a href="サイトURL" target="_blank">
-<img src="バナー画像" style="width:400px;">
-</a>
-</p>
+  <button onclick="changeClass()" class="floating-banner_button" role="button"></button>
+  <p class="target">
+  <a href="サイトURL" target="_blank">
+  <img src="バナー画像" style="width:400px;">
+  </a>
+  </p>
 </div>
 ```
 ```js
 <script type="text/javascript">
-var $target = document.querySelector('.target')
-var $button = document.querySelector('.floating-banner_button')
-$button.addEventListener('click', function() {
-$target.classList.toggle('is-hidden')
-$button.classList.toggle('floating-banner_buttonClose')
-})
+  var $target = document.querySelector('.target')
+  var $button = document.querySelector('.floating-banner_button')
+  $button.addEventListener('click', function() {
+  $target.classList.toggle('is-hidden')
+  $button.classList.toggle('floating-banner_buttonClose')
+  })
 </script>
 }
 ```
