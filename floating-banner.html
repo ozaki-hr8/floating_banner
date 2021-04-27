@@ -1,0 +1,122 @@
+<html style="background-image: linear-gradient(rgba(0, 0, 255, 0.8), rgba(0, 255, 255, 0.5)); color:white; font-size:30px; text-align:center;">
+  <head>
+    <title>開閉式の追従型バナーの実装例</title>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <div style="height:1000px;">
+    スクロールしてみてください
+  </div>
+  <div style="height:1000px;">
+  画面に固定表示されるので目に留まりやすくなります
+</div>
+<div style="height:1000px;">
+また、バナーを閉じれば邪魔にもなりません。
+</div>
+    <div class="floating-banner" style="text-align:right;">
+      <div class="disp">クリック↓</div>
+    <button onclick="changeClass()" class="floating-banner_button" role="button"></button>
+  <p class="target">
+    <a href="https://google.com/" target="_blank">
+      <img src="banner_img.jpg" style="width:400px;">
+    </a>
+    </p>
+  </div>
+  <script type="text/javascript">
+    var $disp = document.querySelector('.disp')
+    var $target = document.querySelector('.target')
+    var $button = document.querySelector('.floating-banner_button')
+    $button.addEventListener('click', function() {
+      $target.classList.toggle('is-hidden')
+      $button.classList.toggle('floating-banner_buttonClose')
+      $disp.classList.toggle('dispNone')
+    })
+  </script>
+  </body>
+  </html>
+
+<style>
+    a:hover img {
+      opacity:1;
+      filter: alpha(opacity=80);
+      -ms-filter: "alpha( opacity=80 )";
+      transition: 0.4s;
+    }
+    .floating-banner {
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      z-index: 99;
+    }
+    .target.is-hidden {
+      display: none;
+    }
+    p {
+      margin: 0;
+    }
+    .dispNone{
+      display:none;
+    }
+    /* ボタンの設定 */
+    .floating-banner_button {
+      display: block;
+      width: 30px;
+      height: 30px;
+      background-color: rgb(87,87,87);
+      position: absolute;
+      left: 92.5%;
+      cursor: pointer;
+    }
+    /* アイコンの設定(開) */
+    .floating-banner_button::before, .floating-banner_button::after {
+      display: block;
+      content: '';
+      width: 4px;
+      height: 24px;
+      background-color: #FFF;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      margin: auto;
+     }
+    .floating-banner_button::before {
+      transform: rotateZ(90deg);
+    }
+    .floating-banner_button::after {
+      transform: rotateZ(90deg);
+    }
+    /* アイコンの設定(閉) */
+     .floating-banner_buttonClose {
+       display: block;
+       width: 30px;
+       height: 30px;
+       margin-left: auto;
+       background-color: rgb(87,87,87);
+       position: absolute;
+       left: 0;
+       bottom: 100%;
+       cursor: pointer;
+     }
+     .floating-banner_buttonClose::before, .floating-banner_buttonClose::after {
+       display: block;
+       content: '';
+       width: 4px;
+       height: 24px;
+       background-color: #FFF;
+       position: absolute;
+       top: 0;
+       right: 0;
+       bottom: 0;
+       left: 0;
+       margin: auto;
+      }
+     .floating-banner_buttonClose::before {
+       transform: rotateZ(0deg);
+     }
+     .floating-banner_buttonClose::after {
+       transform: rotateZ(90deg);
+     }
+  }
+</style>

@@ -1,0 +1,40 @@
+<html style="background-image: linear-gradient(rgba(255, 255, 0, 0.8), rgba(255, 0, 0, 0.5)); color:black; font-size:30px; text-align:center;">
+  <head>
+    <title>開閉式の追従型バナーの実装例</title>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <div style="height:1000px;" >
+    スクロールしてみてください
+    </div>
+
+    <div style="height:1000px;" >
+      バナーの位置は変化しませんが
+      </div>
+
+      <div style="height:1000px;" >
+        ずっと表示されていると邪魔に感じてしまいます。
+        </div>
+    <div class="floating-banner">
+  <a href="https://google.com/" target="_blank">
+    <img src="banner_img.jpg" style="width:400px;">
+  </a>
+</div>
+</body>
+  </html>
+
+
+<style>
+    a:hover img {
+      opacity:1;
+      filter: alpha(opacity=80);
+      -ms-filter: "alpha( opacity=80 )";
+      transition: 0.4s;
+    }
+  .floating-banner {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    z-index: 99;
+  }
+</style>
