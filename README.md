@@ -4,6 +4,7 @@ floating banner for site CVR (Web Design)
 【ページの集客率UPを狙う！開閉式のフローティングバナーの作り方】
 
 <b>サイトにおけるバナーの役割</b>
+
 バナーは広告として、サイトを訪れた人を別のページやサイトに誘導するものとして、また訪問者が求めるページに辿り着きやすくするために使われ、基本的にページの一部に埋め込まれていることがほとんどです。
 
 しかし、バナーが埋め込まれている状態(特にページ中部)では、訪問者がそのバナーに気付かず通り過ぎてしまったり、そのバナーまでたどり着かないこともあります。
@@ -79,83 +80,83 @@ $button.classList.toggle('floating-banner_buttonClose')
 ```
 ```css
 a:hover img {
-opacity:1;
-filter: alpha(opacity=80);
--ms-filter: "alpha( opacity=80 )";
-transition: 0.4s;
+  opacity:1;
+  filter: alpha(opacity=80);
+  -ms-filter: "alpha( opacity=80 )";
+  transition: 0.4s;
 }
 .floating-banner {
-position: fixed;
-left: 0;
-bottom: 0;
-z-index: 99;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: 99;
 }
 .target.is-hidden {
-display: none;
+  display: none;
 }
 p {
-margin: 0;
+  margin: 0;
 }
 /* ボタンの設定 */
 .floating-banner_button {
-display: block;
-width: 30px;
-height: 30px;
-background-color: rgb(87,87,87);
-position: absolute;
-left: 92.5%;
-cursor: pointer;
+  display: block;
+  width: 30px;
+  height: 30px;
+  background-color: rgb(87,87,87);
+  position: absolute;
+  left: 92.5%;
+  cursor: pointer;
 }
 /* アイコンの設定(開) */
 .floating-banner_button::before, .floating-banner_button::after {
-display: block;
-content: '';
-width: 4px;
-height: 24px;
-background-color: #FFF;
-position: absolute;
-top: 0;
-right: 0;
-bottom: 0;
-left: 0;
-margin: auto;
+  display: block;
+  content: '';
+  width: 4px;
+  height: 24px;
+  background-color: #FFF;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
 }
 .floating-banner_button::before {
-transform: rotateZ(90deg);
+  transform: rotateZ(90deg);
 }
 .floating-banner_button::after {
-transform: rotateZ(90deg);
+  transform: rotateZ(90deg);
 }
 /* アイコンの設定(閉) */
 .floating-banner_buttonClose {
-display: block;
-width: 30px;
-height: 30px;
-margin-left: auto;
-background-color: rgb(87,87,87);
-position: absolute;
-left: 0;
-bottom: 100%;
-cursor: pointer;
+  display: block;
+  width: 30px;
+  height: 30px;
+  margin-left: auto;
+  background-color: rgb(87,87,87);
+  position: absolute;
+  left: 0;
+  bottom: 100%;
+  cursor: pointer;
 }
 .floating-banner_buttonClose::before, .floating-banner_buttonClose::after {
-display: block;
-content: '';
-width: 4px;
-height: 24px;
-background-color: #FFF;
-position: absolute;
-top: 0;
-right: 0;
-bottom: 0;
-left: 0;
-margin: auto;
+  display: block;
+  content: '';
+  width: 4px;
+  height: 24px;
+  background-color: #FFF;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
 }
 .floating-banner_buttonClose::before {
-transform: rotateZ(0deg);
+  transform: rotateZ(0deg);
 }
 .floating-banner_buttonClose::after {
-transform: rotateZ(90deg);
+  transform: rotateZ(90deg);
 }
 }
 ```
